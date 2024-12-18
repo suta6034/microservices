@@ -7,6 +7,16 @@ public class CustomerDto {
 
     private String mobileNumber;
 
+    private AccountsDto accountsDto;
+
+    public AccountsDto getAccountsDto() {
+        return accountsDto;
+    }
+
+    public void setAccountsDto(AccountsDto accountsDto) {
+        this.accountsDto = accountsDto;
+    }
+
     public String getName() {
         return name;
     }
@@ -37,6 +47,7 @@ public class CustomerDto {
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", mobileNumber='" + mobileNumber + '\'' +
+                ", accountsDto=" + accountsDto +
                 '}';
     }
 }

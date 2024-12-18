@@ -1,6 +1,12 @@
 package com.asten.accounts.dto;
 
 public class AccountsDto {
+    private Long accountNumber;
+
+    private String accountType;
+
+    private String branchAddress;
+
     public Long getAccountNumber() {
         return accountNumber;
     }
@@ -33,10 +39,4 @@ public class AccountsDto {
                 ", branchAddress='" + branchAddress + '\'' +
                 '}';
     }
-
-    private Long accountNumber;
-
-    private String accountType;
-
-    private String branchAddress;
 }
