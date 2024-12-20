@@ -17,4 +17,8 @@ public interface IAccountsService {
      * @return A {@link CustomerDto} object containing the account details.
      */
     CustomerDto fetchAccount(String mobileNumber);
+
+    boolean updateAccount(CustomerDto customerDto);
+
+    boolean deleteAccount(String mobileNumber);
 }

@@ -1,17 +1,10 @@
 package com.asten.accounts.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@NoArgsConstructor
 //@Table(name = "customer") => when name of class is not matched to the table name
 public class Customer extends BaseEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="customer_id")
@@ -23,6 +16,10 @@ public class Customer extends BaseEntity {
 
     @Column(name="mobile_number")
     private String mobileNumber;
+
+    public Customer() {
+
+    }
 
     public Long getCustomerId() {
         return customerId;

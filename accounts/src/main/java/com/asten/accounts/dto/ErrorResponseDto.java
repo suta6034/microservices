@@ -1,11 +1,24 @@
 package com.asten.accounts.dto;
 
-import lombok.Data;
 import org.springframework.http.HttpStatus;
-
 import java.time.LocalDateTime;
 
 public class ErrorResponseDto {
+    public ErrorResponseDto(String apiPart, HttpStatus errorCode, String errorMessage, LocalDateTime errorTime) {
+        this.apiPart = apiPart;
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.errorTime = errorTime;
+    }
+
+    private String apiPart;
+
+    private HttpStatus errorCode;
+
+    private String errorMessage;
+
+    private LocalDateTime errorTime;
+
     public String getApiPart() {
         return apiPart;
     }
@@ -38,18 +51,5 @@ public class ErrorResponseDto {
         this.errorTime = errorTime;
     }
 
-    public ErrorResponseDto(String apiPart, HttpStatus errorCode, String errorMessage, LocalDateTime errorTime) {
-        this.apiPart = apiPart;
-        this.errorCode = errorCode;
-        this.errorMessage = errorMessage;
-        this.errorTime = errorTime;
-    }
 
-    private String apiPart;
-
-    private HttpStatus errorCode;
-
-    private String errorMessage;
-
-    private LocalDateTime errorTime;
 }
